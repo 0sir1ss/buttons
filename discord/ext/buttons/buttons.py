@@ -165,11 +165,6 @@ class Session:
             pass
         self._session_task.cancel()
 
-        try:
-            await self.page.delete()
-        except discord.NotFound:
-            pass
-
     async def _add_reactions(self, reactions):
         for reaction in reactions:
             try:

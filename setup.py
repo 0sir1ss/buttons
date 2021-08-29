@@ -28,7 +28,7 @@ from setuptools import setup
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
-version = '0.1.1'
+version = '0.1.2'
 
 setup(
     name='buttons',
