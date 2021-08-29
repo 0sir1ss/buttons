@@ -337,7 +337,8 @@ class Paginator(Session):
         else:
             self.page = await ctx.send(self._pages[0])
 
-        self._session_task = ctx.bot.loop.create_task(self._session(ctx))
+        if len(self._pages) != 1:
+            self._session_task = ctx.bot.loop.create_task(self._session(ctx))
 
     async def _session(self, ctx):
         if self.use_defaults:
