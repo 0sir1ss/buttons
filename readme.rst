@@ -41,7 +41,7 @@ A quick and easy paginator example:
     async def test(ctx):
         pag = Paginator(
                         title='Paginator +', colour=discord.Colour.blurple(), entries=[1, 2, 3], length=1, format='**',
-                        footer='more options!', author='0sir1s#0669', author_url='https://cdn.glassbot.club/glass.png/'
+                        footer='more options!', author='0sir1s#0669', author_url='https://cdn.glassbot.club/glass.png'
                         )
 
         await pag.start(ctx)
