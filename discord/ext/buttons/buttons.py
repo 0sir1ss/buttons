@@ -320,7 +320,7 @@ class Paginator(Session):
                     embed.set_author(name=self.author)
                 if self.author_url and not self.author:
                     embed.set_author(icon_url=self.author_url)
-                if self.author and self.footer_url:
+                if self.author and self.author_url:
                     embed.set_author(name=self.author, icon_url=self.author_url)
 
                 self._pages.append(embed)
