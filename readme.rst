@@ -31,32 +31,20 @@ A quick and easy paginator example:
 .. code:: py3
 
     from discord.ext import commands
-    from discord.ext import buttons
+    from discord.ext.buttons import Paginator
 
 
-    class MyPaginator(buttons.Paginator):
-
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-
-        @buttons.button(emoji='\u23FA')
-        async def record_button(self, ctx, member):
-            await ctx.send('This button sends a silly message! But could be programmed to do much more.')
-
-        @buttons.button(emoji='my_custom_emoji:1234567890')
-        async def silly_button(self, ctx, member):
-            await ctx.send('Beep boop...')
-
-
-    bot = commands.Bot(command_prefix='??')
+    bot = commands.Bot(command_prefix=';')
 
 
     @bot.command()
     async def test(ctx):
-        pagey = MyPaginator(title='Silly Paginator', colour=0xc67862, embed=True, timeout=90, use_defaults=True,
-                            entries=[1, 2, 3], length=1, format='**')
+        pag = Paginator(
+                        title='Paginator +', colour=discord.Colour.blurple(), entries=[1, 2, 3], length=1, format='**',
+                        footer='more options!', author='0sir1s#0669', author_url='https://cdn.glassbot.club/glass.png/'
+                        )
 
-        await pagey.start(ctx)
+        await pag.start(ctx)
 
 
     @bot.event
