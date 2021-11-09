@@ -29,7 +29,7 @@ Getting Started
 A quick and easy paginator example:
 
 .. code:: py3
-
+    import discord
     from discord.ext import commands
     from discord.ext.buttons import Paginator
 
