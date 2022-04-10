@@ -1,13 +1,3 @@
-A simple to use, interactive session and paginator with custom buttons for discord.py built on github.com/EvieePy/buttons.
-    
-Still in early stages and undergoing rapid production. Feel free to suggest something via Discord.
-
-Support
----------------------------
-For support using Buttons, please join the official `support server
-<https://discord.gg/9R87syXpZN>`_ on `Discord <https://discordapp.com/>`_.
-
-
 Installation
 ---------------------------
 **Buttons requires Python 3.6 or higher.**
